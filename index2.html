@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floyd's Triangle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .triangle {
+      margin: 20px auto;
+      text-align: left;
+      white-space: pre; /* Preserve spacing */
+      font-family: monospace; /* Use monospace font for alignment */
+    }
+  </style>
+</head>
+<body>
+  <h1>Floyd's Triangle</h1>
+  <label for="rows">Enter number of rows:</label>
+  <input type="number" id="rows" min="1" placeholder="Enter a number">
+  <button onclick="generateTriangle()">Generate Triangle</button>
+  
+  <div class="triangle" id="triangle"></div>
+
+  <script>
+    function generateTriangle() {
+      const rows = parseInt(document.getElementById("rows").value);
+      const triangleDiv = document.getElementById("triangle");
+      triangleDiv.innerHTML = ""; // Clear previous triangle
+
+      if (!rows || rows <= 0) {
+        triangleDiv.innerHTML = "<p>Please enter a valid number of rows.</p>";
+        return;
+      }
+
+      let number = 1; // Start from 1
+      let output = "";
+
+      // Calculate the maximum width for consistent spacing
+      const maxNumber = (rows * (rows + 1)) / 2; // Largest number in the triangle
+      const numberWidth = String(maxNumber).length + 1; // Calculate the width of the largest number
+
+      for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+          // Add numbers with padding for alignment
+          output += String(number).padStart(numberWidth, " ");
+          number++;
+        }
+        output += "\n"; // New line for the next row
+      }
+
+      triangleDiv.textContent = output; // Use textContent to preserve spaces
+    }
+  </script>
+</body>
+</html>

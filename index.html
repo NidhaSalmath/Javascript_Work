@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript work</title>
+    <!-- style link -->
+    <link rel="stylesheet" href="./Asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Asset/css/style.css">
+</head>
+
+<body>
+    <!-- 1 -->
+    <!-- input box text -->
+    <!-- count box -->
+    <!-- btn  to repeat the text -->
+    <!-- inbuild method using -->
+    <!-- 2 -->
+    <!-- cancat 2 text box -->
+    <!-- btn click cancat adding -->
+    <!-- 3 -->
+    <!-- input some text then input text to check a search word is present their is not -->
+    <!-- response print -->
+    <!-- 4 -->
+    <!-- loops qstn 14 to 26 -->
+
+    <!-- First Part -->
+    <!-- 1st   print a Text  repeat -->
+    <div class="container shadow rounded mt-3 p-5">
+        <div class="row row-cols-1 row-cols-sm-3 g-3">
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Repeat Text</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="text" placeholder="enter first number" id="count-text"
+                                    class="form-control">
+                            </div>
+                            <div class="mt-3">
+                                <input type="number" placeholder="enter count" id="count" class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="repeate()" class="btn btn-primary btn-sm shadow">Repeat
+                                    Text</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="reap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd Qsntn Concate -->
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h1 class="card-title">Concatenate Text</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="text" placeholder="enter first number" id="fst-string"
+                                    class="form-control">
+                            </div>
+                            <div class="mt-3">
+                                <input type="text" placeholder="enter first number" id="sec-string"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="concatString()"
+                                    class="btn btn-primary btn-sm shadow">Concatenate</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="stringconcat"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3rd qsntn Searching a word -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h1 class="card-title">Search Word in Paragraph</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <textarea id="paragraph" rows="1" placeholder="Type your paragraph here..."
+                                    class="form-control"></textarea>
+                            </div>
+                            <div class="mt-3">
+                                <input type="text" id="word" placeholder="Enter word to search" class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="searchWord()"
+                                    class="btn btn-primary btn-sm shadow">Search</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2nd part -->
+    <!-- loopsing statments -->
+    <div class="container shadow rounded mt-3 p-5">
+        <div class="row row-cols-1 row-cols-sm-3 g-5">
+
+            <!-- qstn.no 14 palindrome or not(number) -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Check if a Number is Palindrome or Not</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="palindromeInput" placeholder="Enter a number"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="checkPalindromee()"
+                                    class="btn btn-primary btn-sm shadow">Check</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="palindromeResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 15 Prime or Not -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Check if a Number is Prime</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="primeInput" placeholder="Enter a Number" class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="checkPrime()"
+                                    class="btn btn-primary btn-sm shadow">Check</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="primeResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 16 ----- reverse a number -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Find Reverse of a Number</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="reverseInput" placeholder="Enter a Number"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="reverseNumber()"
+                                    class="btn btn-primary btn-sm shadow">Reverse</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="reverseResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 17 ----- numbers into words. -->
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Convert Numbers to Words</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="numbers" placeholder="Enter numbers to convert:"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="convertToWords()"
+                                    class="btn btn-primary btn-sm shadow">convert</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="outputt"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 18 ----- reverse a string -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Reverse a String</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="text" id="inputString" placeholder="Enter a string to reverse:"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="reverseString()"
+                                    class="btn btn-primary btn-sm shadow">Reverse String</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="output"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 19 ------Fibonacci Series -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Generate Fibonacci Series</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="fibCount" placeholder="Enter a Number of terms"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="generateFibonacci()"
+                                    class="btn btn-primary btn-sm shadow">Generate</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="fibResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 21 ------- factorial of a given number -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Calculate Factorial</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="factorialInput" placeholder="Enter a Number"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="calculateFactorial()"
+                                    class="btn btn-primary btn-sm shadow">Calculate</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="factorialResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 22 ------- prime numbers upto a given limt  -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Prime Numbers Up to a Given Limit</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="primeLimit" placeholder="Enter a Limit" class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="printPrimes()"
+                                    class="btn btn-primary btn-sm shadow">Print Prime</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="primeNumbersResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 23 -----Multiplication table of a given number. -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Multiplication Table</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="tableNumber" placeholder="Enter a number" class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="generateMultiplicationTable()"
+                                    class="btn btn-primary btn-sm shadow">Generate Table</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="multiplicationTableResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn.no 25 ----- Print days of week using switch. -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Days of the Week</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="dayInput" placeholder="Enter a number(1-7)"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="getDayOfWeek()" class="btn btn-primary btn-sm shadow">Get
+                                    Day</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="dayResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--qstn.no  26 -----palindrome or not.(String)-->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Palindrome OR Not(String)</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="text" id="inputString" placeholder="Enter a string" class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="checkPalindrome()"
+                                    class="btn btn-primary btn-sm shadow">Check</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="palresult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- qstn.no 24   ----Sum of 10 numbers. -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Sum of 10 Numbers</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="text" id="numbersInput" placeholder="Enter 10 numbers"
+                                    class="form-control">
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="calculateSum()"
+                                    class="btn btn-primary btn-sm shadow">Calculate Sum</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="sumoften" class="sumoften"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- another method one -->
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-heading">
+                        <h2 class="card-title">Sum of 10 Numbers</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mt-3">
+                                <input type="number" id="num1" placeholder="Enter number 1" class="form-control"><br>
+                                <input type="number" id="num2" placeholder="Enter number 2" class="form-control"><br>
+                                <input type="number" id="num3" placeholder="Enter number 3" class="form-control"><br>
+                                <input type="number" id="num4" placeholder="Enter number 4" class="form-control"><br>
+                                <input type="number" id="num5" placeholder="Enter number 5" class="form-control"><br>
+                                <input type="number" id="num6" placeholder="Enter number 6" class="form-control"><br>
+                                <input type="number" id="num7" placeholder="Enter number 7" class="form-control"><br>
+                                <input type="number" id="num8" placeholder="Enter number 8" class="form-control"><br>
+                                <input type="number" id="num9" placeholder="Enter number 9" class="form-control"><br>
+                                <input type="number" id="num10" placeholder="Enter number 10" class="form-control"><br>
+                            </div>
+                            <div class="m-3 text-center">
+                                <button type="button" onclick="sumNumbers()"
+                                    class="btn btn-primary btn-sm shadow">Calculate Sum</button>
+                            </div>
+                        </form>
+                        <div class="card-footer">
+                            <div class="alert alert-dark" id="sumResult"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container shadow rounded mt-3 p-5"> -->
+        <!-- <h1>Floyd's Triangle</h1>
+  <label for="rows">Enter number of rows:</label>
+  <input type="number" id="rows" min="1" placeholder="Enter a number">
+  <button onclick="generateTriangle()">Generate Triangle</button>
+  
+  <div class="triangle" id="triangle"></div>
+         -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="./Asset/main.js"></script>
+</body>
+
+</html>
